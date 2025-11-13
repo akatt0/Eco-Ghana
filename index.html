@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eco Ghana</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #1b5e20;
+      background-color: #f6fff6;
+    }
+
+    /* Header & Navigation */
+    header {
+      background-color: white;
+      color: green;
+      padding: 20px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      display: flex;
+      
+    }
+
+        h1{
+            margin-left: 15px;
+            display: flex;
+          
+        }
+
+        b{
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+        }
+
+        fieldset{
+            color: white;
+            background-color: green;
+            border-radius: 22px;
+            border: none;
+            margin-top:1px ;
+            height: 50px;
+            padding-top: 3px;
+            width: 75px;
+        }
+
+    nav{
+        right: 3px;
+        position: fixed;
+        margin-top: 17px;
+        text-decoration: none;
+    }
+
+    header h1 {
+      margin-bottom: 8px;
+      font-size: 34px;
+      letter-spacing: 1.5px;
+    }
+
+    nav a {
+      color: green;
+      text-decoration: none;
+      margin: 0 18px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      
+      border-bottom: 3px solid green;
+      padding-bottom: 2px;
+    }
+
+    /* Hero Section */
+    #home {
+      position: relative;
+      background: url('img.jpg') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      overflow: hidden;
+      background-size: 100% 100%;
+    }
+
+    /* Overlay for readability */
+    #home::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 50, 0, 0.5);
+      z-index: 0;
+    }
+
+    #home h2,
+    #home p,
+    #home .btn {
+      position: relative;
+      z-index: 1;
+    }
+
+    #home h2 {
+      font-size: 42px;
+      animation: fadeInDown 1.8s;
+    }
+
+    #home p {
+      font-size: 20px;
+      margin: 20px 0;
+      max-width: 600px;
+      animation: fadeInUp 2s;
+      line-height: 1.6;
+    }
+
+    .btn {
+      background-color: #a8e6a1;
+      color: #1b5e20;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s ease;
+      animation: fadeIn 2s;
+    }
+
+    .btn:hover {
+      background-color: #81c784;
+      color: white;
+      transform: scale(1.08);
+      box-shadow: 0 0 10px rgba(168, 230, 161, 0.6);
+    }
+
+    /* About Section */
+    #about {
+      background-color: #e8f5e9;
+      border-radius: 20px;
+      margin: 60px auto;
+      margin-top: 70px;
+      padding: 60px 40px;
+      text-align: center;
+      width: 90%;
+      max-width: 1000px;
+    }
+
+    #about h2 {
+      color: #1b5e20;
+      margin-bottom: 25px;
+      font-size: 30px;
+    }
+
+    #about p {
+      font-size: 18px;
+      max-width: 800px;
+      margin: 15px auto;
+      line-height: 1.8;
+    }
+
+    /* Protect Section */
+    #protect {
+      background-color: #ffffff;
+      padding: 60px 40px;
+      border-radius: 20px;
+      margin: 60px auto;
+      text-align: center;
+      width: 90%;
+      max-width: 1000px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    #protect h2 {
+      color: #1b5e20;
+      margin-bottom: 25px;
+      font-size: 30px;
+    }
+
+    #protect p {
+      font-size: 18px;
+      max-width: 800px;
+      margin: 15px auto;
+      line-height: 1.8;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 15px;
+      margin-top: 40px;
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1> <fieldset>eco</fieldset><b>Ghana</b> </h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#protect">Protect</a>
+      <a href="ecojoin.html">Join us</a>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h2>Together for a Greener Ghana 🌿</h2>
+    <p>Join Eco Ghana in supporting a sustainable future through natural products and eco-friendly living.</p>
+    <button class="btn" onclick="window.location.href='#about'">Explore</button>
+  </section>
+
+  <section id="about">
+    <h2>About Our Natural Products</h2>
+    <p>At Eco Ghana, we believe nature provides everything we need to live healthy and sustainably. 
+    Our products are made from 100% natural ingredients sourced from local Ghanaian farms. 
+    We produce eco-friendly soaps, organic oils, herbal skincare, and biodegradable packaging — 
+    all designed to protect your health and the planet.</p>
+
+    <p>Every purchase supports local farmers and promotes environmental conservation. 
+    We’re proud to show that natural products can be both effective and kind to the Earth.</p>
+  </section>
+
+  <section id="protect">
+    <h2>Protect the Planet</h2>
+    <p>By choosing Eco Ghana’s natural products, you help protect the environment every single day. 
+    Our biodegradable packaging, plant-based ingredients, and zero-waste production methods reduce pollution and keep our communities clean.</p>
+
+    <p>We also run campaigns to encourage recycling, tree planting, and the use of organic materials in homes and schools. 
+    Together, we can protect Ghana’s natural beauty and create a greener, safer planet for future generations.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Eco Ghana | Designed by Group 5</p>
+  </footer>
+
+</body>
+</html>
