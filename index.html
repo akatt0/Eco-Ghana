@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eco Ghana</title>
 
+
+  
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
@@ -52,15 +54,15 @@
             background-color: green;
             border-radius: 22px;
             border: none;
+            margin-top:1px ;
             height: 50px;
+            padding-top: 3px;
             width: 75px;
-            margin-top: -3px;
-            padding-bottom: 55px
         }
 
     nav{
         right: 3px;
-        position: fixed;
+        position: absolute ;
         margin-top: 17px;
         text-decoration: none;
     }
@@ -226,6 +228,69 @@
       from {opacity: 0;}
       to {opacity: 1;}
     }
+
+     @media (max-width: 900px){
+      header{
+        padding: clamp(10px, 3vw, 18px);
+      }
+
+      nav{
+        gap: 12px;
+      }
+
+      section{
+        padding: clamp(18px, 4vw, 36px);
+      }
+    }
+
+    @media (max-width: 600px){
+      header{
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        padding-top: 80px;
+        height: 130px;
+        margin-left: 0px;
+      }
+
+      h1{
+        margin-top: -65px ;
+        position: sticky;
+      }
+
+      header h1{
+        justify-content: center;
+      }
+
+      nav{
+        margin-top: 12px;
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        position: absolute;
+        right: 0%;
+        left: 0%;
+      }
+
+      .btn{
+        width: 100%;
+        max-width: 320px;
+        margin: 12px auto 0 auto;
+      }
+
+      section{
+        width: calc(100% - px);
+        padding: 10px;
+      }
+
+      #protect p {
+        padding: 0 6px;
+        max-width: 100%;
+      }
+    }
+
+
+
   </style>
 </head>
 <body>
@@ -271,7 +336,4 @@
   </footer>
 
 </body>
-
 </html>
-
-
